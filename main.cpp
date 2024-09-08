@@ -17,7 +17,7 @@ bool askBoolQuestion(string question, string accept, string reject) {
       return false;
     }
     else {
-      cout << "Incorrect input, please try again." << endl;
+      cout << "Virheellinen syöttö, yritä uudestaan." << endl;
     }
   }
 }
@@ -28,7 +28,7 @@ int askIntegerQuestion(string question, int min, int max) {
   while (true) {
     int answer;
     cout << question << endl;
-    cout << "<" << min << " to " << max << ">";
+    cout << "<" << min << "-" << max << ">";
 
     cin >> answer;
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -36,7 +36,7 @@ int askIntegerQuestion(string question, int min, int max) {
       return answer;
     }
     else {
-      cout << "Incorrect input, please try again." << endl;
+      cout << "Virheellinen syöttö, yritä uudestaan." << endl;
     }
   }
 }
